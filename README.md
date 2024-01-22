@@ -29,8 +29,6 @@ Coming soon...
 ### Custom dataset
 Coming soon...
 
-## License
-The project is distributed under the [MIT License](https://github.com/GuyTevet/motion-diffusion-model/blob/main/LICENSE)
 
 ## Acknowledgements
 The code is based on [denoising-diffusion-pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch).
