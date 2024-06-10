@@ -53,24 +53,53 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title"><span style="text-shadow: 2px 2px 0px #c0c0c0">TEDi:
                 <strong>T</strong>emporally-Entangled Diffusion for Long-Term Motion Synthesis</span></h1>
-            <!-- <div class="column has-text-centered">
-              <p>Paper and code links soon!</p>
-            </div> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://3dl.cs.uchicago.edu/">Zihan Zhang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://rgliu.com/">Richard Liu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://kfiraberman.github.io/">Kfir Aberman</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana Hanocka</a><sup>1</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Chicago</span>
+              <span class="author-block"><sup>2</sup>Snap Research</span>
+            </div>
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- Code Link. -->
-            <span class="link-block">
-                  <a href="https://github.com/waffleboat/TEDi" class="external-link button is-normal is-rounded is-dark">
+                <span class="link-block">
+                  <a href="https://github.com/threedle/TEDi" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2307.15042.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2307.15042" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
               </div>
 
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -80,16 +109,19 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <video width="1280" height="960" poster="" id="bunny-headphones" autoplay muted loop playsinline
-          height="100%">
+        <video width="1280" height="960" poster="" id="bunny-headphones" autoplay muted loop playsinline height="100%">
           <source src="./static/videos/teaser_animation.mov" type="video/mp4">
         </video>
         <div class="content has-text-justified">
           <p>
-            We present <strong>TEDi</strong> (<strong>T</strong>emporally-<strong>E</strong>ntangled <strong>Di</strong>ffusion), a motion diffusion framework that
-            <strong>entangles</strong> the time-axis of diffusion and the temporal-axis of motion. Compared to typical motion diffusion models, which require 
-            several hundreds of denoising steps to produce a short sequence of clean motion from noise (left), TEDi generates <strong>long-term sequences</strong>
-            of clean frames throughout the process after being initiated by a motion primer - a short motion sequence (right).
+            We present <strong>TEDi</strong> (<strong>T</strong>emporally-<strong>E</strong>ntangled
+            <strong>Di</strong>ffusion), a motion diffusion framework that
+            <strong>entangles</strong> the time-axis of diffusion and the temporal-axis of motion. Compared to typical
+            motion diffusion models, which require
+            several hundreds of denoising steps to produce a short sequence of clean motion from noise (left), TEDi
+            generates <strong>long-term sequences</strong>
+            of clean frames throughout the process after being initiated by a motion primer - a short motion sequence
+            (right).
           </p>
         </div>
       </div>
@@ -140,7 +172,7 @@
           </div>
           <div class="content has-text-justified ">
             <p>
-              We entangle the time-axis of diffusion and the temporal-axis of motion, resulting in a 
+              We entangle the time-axis of diffusion and the temporal-axis of motion, resulting in a
               <strong><em>motion buffer</em></strong> which encodes noisy predictions of future frames.
             </p>
           </div>
@@ -204,7 +236,7 @@
           <div class="content has-text-justified">
             <p> Our framwork generates diverse motion sequences with the same model.</p>
           </div>
-          
+
           <div class="container">
             <div id="results-carousel" class="results-carousel">
               <div class="item item-bunny-headphones">
@@ -278,9 +310,11 @@
           <h2 class="title is-3">Trajectory Control</h2>
           <div class="content has-text-justified">
             <p>
-              Our work can be applied to perform trajectory control during inference without additional training. 
-              Similar to the mechanism of guided generation, trajectory control is achieved with inpainting in the motion buffer.
-              Namely, during inference, we recursively overwrite the trjactory information in the motion buffer with frames in the desired trajectory.
+              Our work can be applied to perform trajectory control during inference without additional training.
+              Similar to the mechanism of guided generation, trajectory control is achieved with inpainting in the
+              motion buffer.
+              Namely, during inference, we recursively overwrite the trjactory information in the motion buffer with
+              frames in the desired trajectory.
             </p>
           </div>
           <div class="overview-image">
@@ -291,8 +325,26 @@
         </div>
       </div>
 
+      <section class="section" id="acknowledgements">
+        <div class="container has-text-justified">
+          <h2 class="title">Acknowledgements</h2>
+          <p>We thank the 3DL lab for their invaluable feedback and support. This work was supported in part through Uchicago's AI Cluster resources, services, and staff expertise.
+          This work was also partially supported by the NSF under Grant No. 2241303, and a gift from Google Research.</p>
+        </div>
+      </section>
 
-
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>@inproceedings{zhang2024tedi,
+              title={TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis}, 
+              author={Zihan Zhang and Richard Liu and Kfir Aberman and Rana Hanocka},
+              year={2024},
+              booktitle={SIGGRAPH, Technical Papers},
+              doi={10.1145/3641519.3657515}
+            }</code></pre>
+        </div>
+      </section>
       <footer class="footer">
         <div class="container">
           <div class="content has-text-centered">
