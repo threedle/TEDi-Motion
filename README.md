@@ -1,6 +1,6 @@
 # TEDi Motion Diffusion
 
-This is the repository that contains source code for [TEDi Motion Diffusion website](https://waffleboat.github.io/TEDi).
+This is the repository that contains source code for [TEDi Motion Diffusion website](https://zzhang-18.github.io/TEDi).
 
 
 # Website License
